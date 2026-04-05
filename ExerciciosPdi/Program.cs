@@ -18,7 +18,8 @@ class Program
                   "8 - Sequencia de fibonacci \n" +
                   "9 - Inverter numeros\n" +
                   "10 - Verificar quantidade de vogais\n" +
-                  "11 - Caixa eletronico");
+                  "11 - Caixa eletronico\n" +
+                  "12 - Validar Cpf");
 
         int opcao = int.Parse(Console.ReadLine());
 
@@ -66,6 +67,9 @@ class Program
             case MenuOpcao.VerificarNotas:
                 Caixa.caixaEletronico();
                 break;
+            case MenuOpcao.VerificarCpf:
+                VerificarCpf.cpf();
+                break;
             default:
                 Console.WriteLine("Opção invalida");
                 break;
@@ -87,5 +91,6 @@ public enum MenuOpcao
     SequenciaFibonacci = 8,
     Inverternumeros = 9,
     VerificarVogais = 10,
-    VerificarNotas = 11
+    VerificarNotas = 11,
+    VerificarCpf = 12,
 }
