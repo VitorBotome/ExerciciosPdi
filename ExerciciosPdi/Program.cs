@@ -16,7 +16,9 @@ class Program
                   "6 - Data atual\n" +
                   "7 - Verificar numero primo\n" +
                   "8 - Sequencia de fibonacci \n" +
-                  "9 - Inverter numeros");
+                  "9 - Inverter numeros\n" +
+                  "10 - Verificar quantidade de vogais\n" +
+                  "11 - Caixa eletronico");
 
         int opcao = int.Parse(Console.ReadLine());
 
@@ -33,12 +35,7 @@ class Program
                 Exercicio2.NomeSobrenome();
                 break;
             case MenuOpcao.Calculadora:
-                /*1. Crie um programa com 2 valores do tipo **`double`** já declarados ****que retorne:
-    - A soma entre esses dois números;
-    - A subtração entre os dois números;
-    - A multiplicação entre os dois números;
-    - A divisão entre os dois números(vale uma verificação se o segundo número é 0!);
-    - A média entre os dois números.*/
+                //Calcular dois valores
                 Exercicio3.Calculadora();
                 break;
             case MenuOpcao.ContarCaracteres:
@@ -46,20 +43,11 @@ class Program
                 Exercicio4.Palavra();
                 break;
             case MenuOpcao.ValidarPlaca:
-                /*Crie um programa em que o usuário precisa digitar a placa de um veículo e o programa verifica se a placa é válida, seguindo o padrão brasileiro válido até 2018:
-    - A placa deve ter 7 caracteres alfanuméricos;
-    - Os três primeiros caracteres são letras(maiúsculas ou minúsculas);
-    - Os quatro últimos caracteres são números;
-
-Ao final, o programa deve exibir*** Verdadeiro*** se a placa for válida e *** Falso*** caso contrário.*/
+                //Crie um programa em que o usuário precisa digitar a placa de um veículo e o programa verifica se a placa é válida, seguindo o padrão brasileiro válido até 2018
                 Exercicio5.PlacaVeiculo();
                 break;
             case MenuOpcao.DataAtual:
-                /* Crie um programa que solicita ao usuário a exibição da data atual em diferentes formatos:
-    - Formato completo(dia da semana, dia do mês, mês, ano, hora, minutos, segundos).
-    - Apenas a data no formato "01/03/2024".
-    - Apenas a hora no formato de 24 horas.
-    - A data com o mês por extenso.*/
+                // Crie um programa que solicita ao usuário a exibição da data atual em diferentes formatos
                 Exercicio6.DataAtual();
                 break;
             case MenuOpcao.NumeroPrimo:
@@ -72,7 +60,12 @@ Ao final, o programa deve exibir*** Verdadeiro*** se a placa for válida e *** F
             case MenuOpcao.Inverternumeros:
                 InverterNumero.inverte();
                 break;
-
+            case MenuOpcao.VerificarVogais:
+                Vogais.veificaVogais();
+                break;
+            case MenuOpcao.VerificarNotas:
+                Caixa.caixaEletronico();
+                break;
             default:
                 Console.WriteLine("Opção invalida");
                 break;
@@ -92,5 +85,7 @@ public enum MenuOpcao
     DataAtual = 6,
     NumeroPrimo = 7,
     SequenciaFibonacci = 8,
-    Inverternumeros = 9
+    Inverternumeros = 9,
+    VerificarVogais = 10,
+    VerificarNotas = 11
 }
