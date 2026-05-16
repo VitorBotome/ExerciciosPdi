@@ -21,11 +21,7 @@ public class Exercicio3
         double soma = num1 + num2;
         double subtracao = num1 - num2;
         double multiplicacao = num1 * num2;
-        double divisao = 0;
-        if (num2 != 0)
-        {
-            divisao = num1 / num2;
-        }
+        double divisao = num1 / num2;
         double media = (num1 + num2) / 2;
 
         Console.WriteLine($"Os dois numeros que voce escolheu foram {num1} e {num2}\n" +

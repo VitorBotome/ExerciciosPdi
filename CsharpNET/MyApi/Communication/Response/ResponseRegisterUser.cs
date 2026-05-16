@@ -1,0 +1,7 @@
+﻿namespace MyApi.Communication.Response;
+
+public class ResponseRegisterUser
+{
+    public int id {  get; set; }
+    public string name { get; set; } = string.Empty;
+}
